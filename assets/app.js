@@ -1,21 +1,26 @@
-// ---------- FIREBASE ----------
+// ---------- NEW FIREBASE CONFIG (gradoo-f7416) ----------
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
 import {
-  getStorage, ref, uploadBytesResumable, getDownloadURL, listAll, deleteObject
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+  listAll,
+  deleteObject
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDLRu0tXWSyHlB7F0MfHzitBpuUYUQyMdI",
-  authDomain: "gradbridge-5e613.firebaseapp.com",
-  projectId: "gradbridge-5e613",
-  storageBucket: "gradbridge-5e613.appspot.com",
-  messagingSenderId: "986933006410",
-  appId: "1:986933006410:web:d02848c34a2f4e2038d6b3"
+  apiKey: "AIzaSyAFYMdd5z3xVIdnYfL9jUBpa9olYarrKYo",
+  authDomain: "gradoo-f7416.firebaseapp.com",
+  projectId: "gradoo-f7416",
+  storageBucket: "gradoo-f7416.firebasestorage.app",
+  messagingSenderId: "824276999006",
+  appId: "1:824276999006:web:3d5c2565f8591c75f0cdcf"
 };
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
-// ---------- THEME ----------
+// ---------- THEME TOGGLE ----------
 const toggleBtn = document.getElementById("themeToggle");
 const html = document.documentElement;
 const saved = localStorage.getItem("theme");
@@ -133,7 +138,7 @@ docTable.addEventListener("click", async e => {
 });
 refreshDocs();
 
-// ---------- GEMINI CHAT ----------
+// ---------- GEMINI AI CHAT ----------
 const chatBox = document.getElementById("chatBox");
 const chatInput = document.getElementById("chatInput");
 const sendBtn = document.getElementById("sendBtn");
