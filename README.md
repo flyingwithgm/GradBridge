@@ -17,7 +17,7 @@ Fully functional web platform for African students preparing to study abroad.
 ```bash
 pkg install nodejs git -y
 npm i -g firebase-tools
-git clone https://github.com/flyingwithgm/Gradbridge.git
-cd Gradbridge
+git clone https://github.com/flyingwithgm/GradBridge.git
+cd GradBridge 
 firebase login
 firebase deploy
