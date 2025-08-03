@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "assets/**", "use": "@vercel/static" }
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/assets/$1" }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/assets/$1" }
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
   ]
 }
