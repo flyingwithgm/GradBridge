@@ -1,0 +1,27 @@
+[
+  {
+    "country": "USA",
+    "courseLevel": "Masters",
+    "minIELTS": 6.5,
+    "minTOEFL": 79,
+    "docs": ["Passport", "DS-160", "I-20", "SEVIS receipt", "Bank statement (6 months)"],
+    "tuitionUSD": [15000, 45000],
+    "livingUSD": [10000, 18000]
+  },
+  {
+    "country": "Canada",
+    "courseLevel": "Masters",
+    "minIELTS": 6.5,
+    "docs": ["Passport", "LOA", "GIC proof", "Medical exam", "Bank statement"],
+    "tuitionUSD": [12000, 35000],
+    "livingUSD": [8000, 15000]
+  },
+  {
+    "country": "UK",
+    "courseLevel": "Masters",
+    "minIELTS": 6,
+    "docs": ["Passport", "CAS", "TB test", "Bank statement (28 days)"],
+    "tuitionUSD": [14000, 30000],
+    "livingUSD": [11000, 15000]
+  }
+]
