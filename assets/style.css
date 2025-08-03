@@ -1,0 +1,99 @@
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #9ca3af;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,.06);
+  --font: "Inter", sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --surface: #1f2937;
+  --text: #f9fafb;
+  --muted: #6b7280;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 1rem;
+  transition: background .3s, color .3s;
+}
+
+header { text-align: center; margin-bottom: 2rem; position: relative; }
+h1 { font-size: 2.5rem; color: var(--primary); }
+#themeToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+section {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+label { display: block; margin-bottom: .75rem; }
+select, input[type=number], textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  margin-bottom: .5rem;
+}
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background .3s;
+}
+button:hover { background: var(--primary-dark); }
+
+#timelineList li { margin-bottom: .5rem; }
+#reqDetails ul { margin-top: .5rem; padding-left: 1.2rem; }
+#budgetResult { margin-top: 1rem; font-weight: 600; }
+
+/* Document & chat unchanged */
+table { width: 100%; margin-top: 1rem; border-collapse: collapse; }
+th, td { padding: .5rem; text-align: left; }
+#chatBox {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  padding: .5rem;
+  margin-bottom: .5rem;
+  background: var(--surface);
+}
+#chatInputBox { display: flex; gap: .5rem; }
+#chatInput { flex: 1; padding: .5rem; border: 1px solid var(--muted); border-radius: var(--radius); }
+#floatBtn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+@media (min-width: 768px) { #floatBtn { display: none; } }
