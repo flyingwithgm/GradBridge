@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GradBridge – Study Abroad Simplified</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>GradBridge</h1>
+    <p>Your AI-powered study-abroad companion</p>
+    <button id="themeToggle" aria-label="Toggle dark mode">🌗</button>
+  </header>
+
+  <!-- ---------- 1. Timeline ---------- -->
+  <section id="timeline">
+    <h2>📅 Key Deadlines</h2>
+    <ul id="timelineList"></ul>
+  </section>
+
+  <!-- ---------- 2. Requirements Cheat-Sheet ---------- -->
+  <section id="requirements">
+    <h2>📚 Country Requirements</h2>
+    <select id="reqSelect">
+      <option value="">-- Select Country --</option>
+    </select>
+    <div id="reqDetails"></div>
+  </section>
+
+  <!-- ---------- 3. Budget Calculator ---------- -->
+  <section id="budget">
+    <h2>💳 Budget Estimator</h2>
+    <label>Country
+      <select id="budgetCountry"></select>
+    </label>
+    <label>Course Level
+      <select id="budgetLevel">
+        <option>Masters</option>
+        <option>Bachelors</option>
+        <option>PhD</option>
+      </select>
+    </label>
+    <label>Program Duration (years)
+      <input id="budgetYears" type="number" min="1" max="6" value="2"/>
+    </label>
+    <button id="calcBtn">Calculate</button>
+    <p id="budgetResult"></p>
+  </section>
+
+  <!-- ---------- 4. Document Vault ---------- -->
+  <section id="documents">
+    <h2>📂 My Visa Documents</h2>
+    <input type="file" id="docInput" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"/>
+    <button id="uploadBtn">Upload</button>
+    <table id="docTable">
+      <thead><tr><th>Name</th><th>Size</th><th>Actions</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- ---------- 5. AI Chat ---------- -->
+  <section id="chat">
+    <h2>🤖 Visa Interview Coach</h2>
+    <div id="chatBox"></div>
+    <div id="chatInputBox">
+      <input id="chatInput" placeholder="Ask any visa question..."/>
+      <button id="sendBtn">Send</button>
+    </div>
+  </section>
+
+  <!-- ---------- 6. Contact Form ---------- -->
+  <section id="contact">
+    <h2>📧 Contact Us</h2>
+    <form id="contactForm">
+      <input name="from_name" placeholder="Your Name" required/>
+      <input name="from_email" type="email" placeholder="Email" required/>
+      <textarea name="message" placeholder="Message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- ---------- 7. Floating Chat ---------- -->
+  <button id="floatBtn" title="Open Chat">💬</button>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
